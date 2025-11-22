@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Invito sfogliabile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar" role="banner">
+    <h1 class="visually-hidden">Partecipazione Michela e Daniele</h1>
+    <nav class="controls" aria-label="Controlli flipbook">
+      <button id="prevBtn" class="btn" aria-label="Pagina precedente">‹</button>
+      <span id="pageIndicator" aria-live="polite" aria-atomic="true">1 / 1</span>
+      <button id="nextBtn" class="btn" aria-label="Pagina successiva">›</button>
+      <a id="downloadBtn" class="btn" href="assets/invito.pdf" download>Scarica PDF</a>
+    </nav>
+  </header>
+
+  <main id="flipbook" class="flipbook" role="region" aria-label="Partecipazione Sfogliabile"></main>
+
+  <script>
+    window.FLIPBOOK_CONFIG = {
+      totalPages: 5,          // <-- Cambia questo numero: quante JPG hai
+      path: 'assets/pages/page-',
+      ext: 'jpg'
+    };
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
